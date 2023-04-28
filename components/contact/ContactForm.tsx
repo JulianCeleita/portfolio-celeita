@@ -1,4 +1,4 @@
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import Button from "../reusable/Button";
 import FormInput from "../reusable/FormInput";
 
