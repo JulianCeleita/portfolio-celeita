@@ -1,24 +1,10 @@
 import { useState } from "react";
-import { FiSearch } from "react-icons/fi";
-import ProjectSingle from "./ProjectSingle";
 import { projectsData } from "../../data/projectsData";
-import ProjectsFilter from "./ProjectsFilter";
+import ProjectSingle from "./ProjectSingle";
 
 function ProjectsGrid() {
-  const [searchProject, setSearchProject] = useState();
-  const [selectProject, setSelectProject] = useState();
-
-  // @todo - To be fixed
-  // const searchProjectsByTitle = projectsData.filter((item) => {
-  // 	const result = item.title
-  // 		.toLowerCase()
-  // 		.includes(searchProject.toLowerCase())
-  // 		? item
-  // 		: searchProject == ''
-  // 		? item
-  // 		: '';
-  // 	return result;
-  // });
+  const [searchProject, setSearchProject] = useState<string>();
+  const [selectProject, setSelectProject] = useState<string>("");
 
   const selectProjectsByCategory = projectsData.filter((item) => {
     let category =
