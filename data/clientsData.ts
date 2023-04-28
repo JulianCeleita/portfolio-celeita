@@ -1,56 +1,56 @@
 import { v4 as uuidv4 } from 'uuid';
 
 // Import images
-import AmazonImage from '../public/images/brands/amazon_gray.png';
-import SonyImage from '../public/images/brands/sony_gray.png';
-import AdidasImage from '../public/images/brands/adidas_gray.png';
-import FilaImage from '../public/images/brands/fila_gray.png';
-import NBImage from '../public/images/brands/nb_gray.png';
-import SamsungImage from '../public/images/brands/samsung_gray.png';
-import CanonImage from '../public/images/brands/canon_gray.png';
-import PumaImage from '../public/images/brands/puma_gray.png';
+import NextImage from '../public/images/brands/next.webp';
+import React from '../public/images/brands/react.png';
+import Redux from '../public/images/brands/redux.png';
+import Tailwind from '../public/images/brands/tailwind.png';
+import GraphQl from '../public/images/brands/graphql.png';
+import Firebase from '../public/images/brands/firebase.png';
+import Bootstrap from '../public/images/brands/bootstrap.jpg';
+import Vite from '../public/images/brands/vite.png';
 
-export const clientsHeading = 'Some of the brands I worked with';
+export const clientsHeading = 'Tools & Technologies';
 
 export const clientsData = [
 	{
 		id: uuidv4(),
 		title: 'Amazon',
-		img: AmazonImage,
+		img: NextImage,
 	},
 	{
 		id: uuidv4(),
 		title: 'Sony',
-		img: SonyImage,
+		img: React,
 	},
 	{
 		id: uuidv4(),
 		title: 'Adidas',
-		img: AdidasImage,
+		img: Redux,
 	},
 	{
 		id: uuidv4(),
 		title: 'FILA',
-		img: FilaImage,
+		img: Tailwind,
 	},
 	{
 		id: uuidv4(),
 		title: 'NB',
-		img: NBImage,
+		img: GraphQl,
 	},
 	{
 		id: uuidv4(),
 		title: 'SAMSUNG',
-		img: SamsungImage,
+		img: Firebase,
 	},
 	{
 		id: uuidv4(),
 		title: 'CANON',
-		img: CanonImage,
+		img: Vite,
 	},
 	{
 		id: uuidv4(),
 		title: 'PUMA',
-		img: PumaImage,
+		img: Bootstrap,
 	},
 ];
