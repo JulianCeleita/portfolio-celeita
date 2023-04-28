@@ -19,7 +19,7 @@ interface AboutClientSingleProps {
 
 interface CounterItemProps {
   title: string;
-  counter: number;
+  counter: any;
   measurement: string;
 }
 
