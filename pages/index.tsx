@@ -4,13 +4,13 @@ import ProjectsGrid from '../components/projects/ProjectsGrid';
 import Button from '../components/reusable/Button';
 import AppBanner from '../components/shared/AppBanner';
 import BackgroundAnimation from '../components/BackgroundAnimation';
+import Banner from '../components/shared/Banner';
 
 export default function Home() {
 	return (
 		<div className="container mx-auto">
 			<PagesMetaHead title="Home" />
 			<AppBanner />
-			<BackgroundAnimation/>
 
 			<ProjectsGrid />
 
