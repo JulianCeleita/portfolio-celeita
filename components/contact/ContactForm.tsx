@@ -16,6 +16,12 @@ function ContactForm() {
       .then(
         (result) => {
           console.log(result.text);
+          const confirmationMessage = document.getElementById(
+            "confirmation-message"
+          );
+          if (confirmationMessage) {
+            confirmationMessage.classList.remove("hidden");
+          }
         },
         (error) => {
           console.log(error.text);
@@ -83,6 +89,12 @@ function ContactForm() {
             <span className="font-general-medium  px-7 py-4 text-white text-center font-medium tracking-wider bg-indigo-500 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900 rounded-lg mt-6 duration-500">
               <Button title="Send Message" aria-label="Send Message" />
             </span>
+          </div>
+          <div
+            id="confirmation-message"
+            className="hidden bg-transparent border border-solid border-green-500 text-green-500 text-center p-2 rounded-md mt-7"
+          >
+            Email sent successfully!
           </div>
         </form>
       </div>
