@@ -11,7 +11,7 @@ const socialLinks: SocialLink[] = [
   {
     id: 1,
     icon: <FiGlobe />,
-    url: "https://www..me/",
+    url: "https://portfolio-celeita-git-main-julianceleita.vercel.app/",
   },
   {
     id: 2,

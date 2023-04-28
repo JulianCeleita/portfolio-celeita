@@ -215,7 +215,7 @@ export const projectsData: Project[] = [
   },
   {
     id: 4,
-    title: "Happycheck Application",
+    title: "Happycheck",
     url: "https://happy-check-app-git-main-julianceleita.vercel.app/",
     category: "Web Application",
     img: "/happycheck.png",
@@ -355,7 +355,7 @@ export const projectsData: Project[] = [
   {
     id: 6,
     title: "Personal Portfolio",
-    url: "",
+    url: "https://portfolio-celeita-git-main-julianceleita.vercel.app/",
     category: "Web Application",
     img: "/portfolio.png",
     ProjectHeader: {
@@ -366,18 +366,18 @@ export const projectsData: Project[] = [
     ProjectImages: [
       {
         id: uuidv4(),
-        title: "Kabul Apple New Design System",
-        img: "/images/ui-project-1.jpg",
+        title: "Personal Portfolio",
+        img: "/portfolio2.png",
       },
       {
         id: uuidv4(),
-        title: "Kabul Apple New Design System",
-        img: "/images/web-project-2.jpg",
+        title: "Personal Portfolio",
+        img: "/portfolio3.png",
       },
       {
         id: uuidv4(),
-        title: "Kabul Apple New Design System",
-        img: "/images/mobile-project-2.jpg",
+        title: "Personal Portfolio",
+        img: "/portfolio4.png",
       },
     ],
     ProjectInfo: {
@@ -386,7 +386,7 @@ export const projectsData: Project[] = [
         {
           id: uuidv4(),
           title: "Name",
-          details: "Company Ltd",
+          details: "Super Store Platform",
         },
         {
           id: uuidv4(),
@@ -396,48 +396,26 @@ export const projectsData: Project[] = [
         {
           id: uuidv4(),
           title: "Website",
-          details: "https://company.com",
-        },
-        {
-          id: uuidv4(),
-          title: "Phone",
-          details: "555 8888 888",
+          details: "https://portfolio-celeita-git-main-julianceleita.vercel.app/",
         },
       ],
       Technologies: [
         {
           title: "Tools & Technologies",
           techs: [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Vue.js",
+            "NextJS",
+            "React",
+            "Typescript",
             "TailwindCSS",
-            "AdobeXD",
           ],
         },
       ],
-      ProjectDetailsHeading: "Challenge",
+      ProjectDetailsHeading: "Project Description",
       ProjectDetails: [
         {
           id: uuidv4(),
           details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
-        },
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
-        },
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
-        },
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
+          'This project was focused on showcasing my experience as a front-end developer. It was developed using NextJS, React, TailwindCSS, TypeScript, and other visual tools. Here, I talk about myself and showcase the latest applications I have developed. Click on Website to see the deployment on Vercel.'
         },
       ],
     },

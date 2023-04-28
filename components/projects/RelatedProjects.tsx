@@ -7,7 +7,7 @@ const RelatedProject = {
     {
       id: uuidv4(),
       title: "Mobile UI",
-      img: "/superstore1.png",
+      img: "/superstore.png",
     },
     {
       id: uuidv4(),
