@@ -170,7 +170,7 @@ function AppHeader() {
         {showModal ? (
           <HireMeModal onClose={showHireMeModal} onRequest={showHireMeModal} />
         ) : null}
-        {showModal ? showHireMeModal : null}
+        {showModal ? !showHireMeModal : null}
       </div>
     </motion.nav>
   );
