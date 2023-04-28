@@ -8,15 +8,15 @@ function PagesMetaHead({ title, keywords, description }: PagesMetaHeadProps) {
       <meta name="description" content={description} />
       <meta charSet="utf-8" />
       <link rel="icon" href="/favicon.ico" />
-      <title>{title}</title>
+      <title>Portfolio Julian Celeita</title>
     </Head>
   );
 }
 
 PagesMetaHead.defaultProps = {
-  title: "Next.js & TailwindCSS Portfolio Project",
-  keywords: "next.js, react, web, ui",
-  description: "Simple and multi-page next.js and react application",
+  title: "Next.js & TailwindCSS Julian Celeita Portfolio",
+  keywords: "React, Next.js, TypeScript, Firebase, GraphQL, Redux",
+  description: "Hello, this is my personal portfolio dedicated to showcasing my best projects. You will find applications made with React, Next.js, TypeScript, Firebase, GraphQL, Redux, among others!",
 };
 
 export default PagesMetaHead;
