@@ -9,7 +9,7 @@ function AboutClients() {
       <p className="font-general-medium text-2xl sm:text-3xl  text-center text-primary-dark dark:text-primary-light">
         {clientsHeading}
       </p>
-      <div className="grid grid-cols-2 sm:grid-cols-4 mt-10 sm:mt-14 gap-2">
+      <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-8 mt-10 sm:mt-14 gap-2">
         {clients.map((client) => (
           <AboutClientSingle
             title={client.title}

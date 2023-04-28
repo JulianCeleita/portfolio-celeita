@@ -1,15 +1,36 @@
+import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
 import { FiX } from "react-icons/fi";
 import Button from "./reusable/Button";
-
-const selectOptions = [
-  "Web Application",
-  "Mobile Application",
-  "UI/UX Design",
-  "Branding",
-];
+import FormInput from "./reusable/FormInput";
 
 function HireMeModal({ onClose, onRequest }: HireMeModalProps) {
+  function sendEmail(e: any) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "default_service",
+        "template_0t8it18",
+        e.target,
+        "YP3WMHTWmE_WLDbkU"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          const confirmationMessage = document.getElementById(
+            "confirmation-message"
+          );
+          if (confirmationMessage) {
+            confirmationMessage.classList.remove("hidden");
+          }
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  }
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -36,65 +57,49 @@ function HireMeModal({ onClose, onRequest }: HireMeModalProps) {
               </button>
             </div>
             <div className="modal-body p-5 w-full h-full">
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                }}
-                className="max-w-xl m-4 text-left"
-              >
-                <div className="">
-                  <input
-                    className="w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    placeholder="Name"
-                    aria-label="Name"
-                  />
-                </div>
-                <div className="mt-6">
-                  <input
-                    className="w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
-                    id="email"
-                    name="email"
-                    type="text"
-                    required
-                    placeholder="Email"
-                    aria-label="Email"
-                  />
-                </div>
-                <div className="mt-6">
-                  <select
-                    className="w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
-                    id="subject"
-                    name="subject"
-                    required
-                    aria-label="Project Category"
-                  >
-                    {selectOptions.map((option) => (
-                      <option className="text-normal sm:text-md" key={option}>
-                        {option}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+              <form onSubmit={sendEmail} className="max-w-xl m-4 text-left">
+                <FormInput
+                  inputLabel=""
+                  labelFor="emailjs_name"
+                  inputType="text"
+                  inputId="emailjs_name"
+                  inputName="emailjs_name"
+                  placeholderText="Your Name"
+                  ariaLabelName="Name"
+                />
+                <FormInput
+                  inputLabel=""
+                  labelFor="emailjs_email"
+                  inputType="email"
+                  inputId="emailjs_email"
+                  inputName="emailjs_email"
+                  placeholderText="Your email"
+                  ariaLabelName="Email"
+                />
+                <FormInput
+                  inputLabel=""
+                  labelFor="emailjs_subject"
+                  inputType="text"
+                  inputId="emailjs_subject"
+                  inputName="emailjs_subject"
+                  placeholderText="Enter your subject"
+                  ariaLabelName="EmailJS Subject"
+                />
 
                 <div className="mt-6">
                   <textarea
-                    className="w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
+                    className="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
                     id="message"
                     name="message"
                     cols={14}
                     rows={6}
-                    aria-label="Details"
-                    placeholder="Project description"
+                    aria-label="Message"
+                    placeholder="Enter your message"
                   ></textarea>
                 </div>
 
                 <div className="mt-6 pb-4 sm:pb-1">
                   <span
-                    onClick={onRequest}
                     className="px-4
 											sm:px-6
 											py-2
@@ -106,8 +111,14 @@ function HireMeModal({ onClose, onRequest }: HireMeModalProps) {
 											focus:ring-1 focus:ring-indigo-900 duration-500"
                     aria-label="Submit Request"
                   >
-                    <Button title="Send Request" />
+                    <Button title="Send Request" aria-label="Send Message" />
                   </span>
+                </div>
+                <div
+                  id="confirmation-message"
+                  className="hidden bg-transparent border border-solid border-green-500 text-green-500 text-center p-2 rounded-md mt-4"
+                >
+                  Email sent successfully!
                 </div>
               </form>
             </div>

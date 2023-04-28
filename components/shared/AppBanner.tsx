@@ -12,9 +12,9 @@ function AppBanner() {
       transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
       className="flex flex-col sm:justify-between items-center sm:flex-row"
     >
-      <div className="w-full md:w-1/3 text-left">
+      <div className="w-full md:w-1/3 text-left ">
         <Image
-          className="rounded-full mb-4"
+          className="rounded-full mb-4 hover:scale-105 transition-transform duration-200 ease-in-out"
           src="/me.png"
           alt="JulianCeleita"
           height={250}

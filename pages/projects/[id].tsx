@@ -37,7 +37,7 @@ function ProjectSingle(props: any) {
             <div className="mb-10 sm:mb-0" key={project.id}>
               <Image
                 src={project.img}
-                className="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
+                className="rounded-xl cursor-pointer shadow-lg sm:shadow-none "
                 alt={project.title}
                 key={project.id}
                 layout="responsive"
