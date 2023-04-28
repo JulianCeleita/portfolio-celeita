@@ -24,7 +24,7 @@ interface CounterItemProps {
 }
 
 interface ProjectSingleProps {
-  id: string;
+  id: string | number;
   img: string;
   title: string;
   category: string;
