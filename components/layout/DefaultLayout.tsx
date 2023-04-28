@@ -1,16 +1,16 @@
-import AppHeader from '../shared/AppHeader';
-import AppFooter from '../shared/AppFooter';
-import PagesMetaHead from '../PagesMetaHead';
+import PagesMetaHead from "../PagesMetaHead";
+import AppFooter from "../shared/AppFooter";
+import AppHeader from "../shared/AppHeader";
 
-const DefaultLayout = ({ children }) => {
-	return (
-		<>
-			<PagesMetaHead />
-			<AppHeader />
-			<div>{children}</div>
-			<AppFooter />
-		</>
-	);
+const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <>
+      <PagesMetaHead description={undefined} />
+      <AppHeader />
+      <div>{children}</div>
+      <AppFooter />
+    </>
+  );
 };
 
 export default DefaultLayout;
