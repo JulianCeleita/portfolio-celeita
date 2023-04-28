@@ -39,3 +39,9 @@ interface Skill {
     placeholderText: string;
     ariaLabelName: string;
   }
+
+  interface SocialLink {
+    id: number;
+    icon: React.ReactNode;
+    url: string;
+  }
